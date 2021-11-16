@@ -74,7 +74,7 @@ function Game(props) {
   }
   function leaveRoom() {
     props.socket.emit("leave_room", gameId)
-    navigate("/")
+    navigate("/UltimateTicTacToe-Frontend/")
   }
   function playAgain() {
     props.socket.emit("reset_game", gameId)

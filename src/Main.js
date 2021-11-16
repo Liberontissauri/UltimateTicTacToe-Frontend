@@ -22,7 +22,7 @@ function App(props) {
     props.socket.emit("room_id", clicked_room.name)
   }
   function joinRoom() {
-    navigate(`/games/${room_id}?password=${password}`)
+    navigate(`/UltimateTicTacToe-Frontend/games/${room_id}?password=${password}`)
   }
 
   return (
@@ -33,7 +33,7 @@ function App(props) {
       <h2 className={styles.inputLabel}>Room Password</h2>
       <TextInput value={password} onChange={(e) => {setPassword(e.target.value)}}></TextInput>
       <button className={styles.joinBtn} onClick={joinRoom}>Join Room</button>
-      <Link to="/create">
+      <Link to="/UltimateTicTacToe-Frontend/create">
         <button className={styles.createBtn}>Create Room</button>
       </Link>
       <RoomsTable rooms={room_list} onRoomClick={roomClick}></RoomsTable>
