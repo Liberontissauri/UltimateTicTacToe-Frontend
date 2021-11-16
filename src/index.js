@@ -11,9 +11,9 @@ const socket = io("https://ultimate-tic-tac-toe-lib.herokuapp.com/");
 ReactDOM.render(
     <BrowserRouter>
       <Routes>
-        <Route path="/UltimateTicTacToe-Frontend/" element={<Main socket={socket}/>}/>
-        <Route path="/UltimateTicTacToe-Frontend/create" element={<Create socket={socket}/>}/>
-        <Route path="/UltimateTicTacToe-Frontend/games/:gameId" element={<Game socket={socket}/>}/>
+        <Route path="/" element={<Main socket={socket}/>}/>
+        <Route path="/create" element={<Create socket={socket}/>}/>
+        <Route path="/games/:gameId" element={<Game socket={socket}/>}/>
       </Routes>
     </BrowserRouter>,
   document.getElementById('root')

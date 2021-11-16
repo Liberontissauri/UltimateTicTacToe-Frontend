@@ -33,7 +33,7 @@ function Game(props) {
           "Success",
           data,
           "Proceed", () => {
-            navigate("/UltimateTicTacToe-Frontend/")
+            navigate("/")
           })
         
       })
