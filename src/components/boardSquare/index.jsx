@@ -1,17 +1,22 @@
 import React from 'react'
 import styles from "./BoardSquare.module.css"
 
+import circle from "../../icons/circle.svg"
+import cross from "../../icons/cross.svg"
+import triangle from "../../icons/triangle.svg"
+import square from "../../icons/square.svg"
+
 function BoardSquare(props) {
     function selectImage(icon) {
         switch (icon) {
             case "circle":
-                return "/icons/circle.svg";
+                return circle;
             case "cross":
-                return "/icons/cross.svg";
+                return cross;
             case "triangle":
-                return "/icons/triangle.svg";
+                return triangle;
             case "square":
-                return "/icons/square.svg";
+                return square;
             default:
                 return "";
         }
