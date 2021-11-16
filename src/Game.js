@@ -17,7 +17,7 @@ function Game(props) {
                                                       [{piece: "none"},{piece: "none"},{piece: "none"},{piece: "none"}]]);
   
   const { gameId } = useParams()
-  let [searchParams, setSearchParams] = useSearchParams()
+  let [searchParams] = useSearchParams()
   const password = searchParams.get("password")
 
   //If this is not done socket io will keep creating connection each time there is a change in the state
@@ -40,7 +40,7 @@ function Game(props) {
     props.socket.on("game_end", enddata => {
       const winner_id = enddata.winner_id;
       const winner_piece = enddata.winner_piece;
-      if(winner_id == props.socket.id) return Confirm.show(
+      if(winner_id === props.socket.id) return Confirm.show(
         "You Won",
         "Do you want to play again?",
         "Play again", "Leave Room",
